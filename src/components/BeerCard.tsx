@@ -36,18 +36,3 @@ export const BeerCard = ({ beer }: BeerCardProps) => {
     </Link>
   );
 };
-
-// export const BeerCard = ({ beer }: BeerCardProps) => {
-//   return (
-//     <Link to={`/beers/${beer._id}`}>
-//       <Card style={{ width: "18rem" }} key={beer._id}>
-//         <Card.Img variant="top" src={beer.image_url} />
-//         <Card.Body>
-//           <Card.Title>{beer.name}</Card.Title>
-//           <Card.Text>{beer.tagline}</Card.Text>
-//           <Card.Text>Contributed by: {beer.contributed_by}</Card.Text>
-//         </Card.Body>
-//       </Card>
-//     </Link>
-//   );
-// };
