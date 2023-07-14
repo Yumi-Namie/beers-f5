@@ -25,11 +25,11 @@ export const AllBeersPage = () => {
   return (
     <Container>
       <Row>
-        {beers.map((beer: any) => (
-          <Col sm={2} key={beer.id}>
-            <BeerCard beer={beer} />
-          </Col>
-        ))}
+        <Col>
+          {beers.map((beer: Beer) => (
+            <BeerCard beer={beer} key={beer._id} />
+          ))}
+        </Col>
       </Row>
     </Container>
   );
