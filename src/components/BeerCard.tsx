@@ -1,7 +1,7 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-interface Beer {
+export interface Beer {
   id: number;
   image_url: string;
   name: string;
