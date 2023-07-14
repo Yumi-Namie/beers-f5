@@ -41,6 +41,8 @@ Since beer is one of the most consumed drinks by some of the FactoriaF5 hackers 
 cd beers-f5
 npm install
 npm run dev
+npm install react-router-dom
+npm install react-bootstrap bootstrap
 ```
 
 ## Submission

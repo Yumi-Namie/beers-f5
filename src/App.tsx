@@ -7,11 +7,13 @@ import { HomePage } from './pages/HomePage'
 import { RandomBeerPage } from './pages/RandomBeerPage'
 import { BeerDetailsPage } from './pages/BeerDetailsPage'
 import NotFoundPage from './pages/NotFoundPage'
+import { Navbar } from './components/Navbar'
 
 function App() {
 
   return (
     <>
+      <Navbar/>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/beers" element={<AllBeersPage />} />
