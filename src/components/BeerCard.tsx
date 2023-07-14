@@ -19,16 +19,16 @@ interface BeerCardProps {
 export const BeerCard = ({ beer }: BeerCardProps) => {
   return (
     <Link className="beer-card" to={`/beers/${beer._id}`}>
-      <Card style={{ maxWidth: "25rem" }} key={beer._id}>
-        <Row>
-          <Col xs={4} className="d-flex justify-content-center">
+      <Card className="w-100" key={beer._id}>
+        <Row className="beer-card-row d-flex justify-content-start align-items-center">
+          <Col xs={4} >
             <Card.Img variant="top" src={beer.image_url} style={{ width: "auto", height: "9rem", objectFit: "cover" }} />
           </Col>
-          <Col xs={8} className="d-flex align-items-center text-start">
-            <Card.Body >
-              <Card.Title>{beer.name}</Card.Title>
-              <Card.Text className="text-secondary mt-2">{beer.tagline}</Card.Text>
-              <Card.Text className="mt-1"> Create by: {beer.name}</Card.Text>
+          <Col xs={7} className=" d-flex ml-auto m-0">
+            <Card.Body className="text-start p-0 w-100">
+              <Card.Title style={{ fontSize: "1.2rem" }} >{beer.name}</Card.Title>
+              <Card.Text className="text-secondary mb-1" style={{ fontSize: ".9rem" }}>{beer.tagline}</Card.Text>
+              <Card.Text className="mt-1" style={{ fontSize: ".6rem" }}> Create by: {beer.name}</Card.Text>
             </Card.Body>
           </Col>
         </Row>
