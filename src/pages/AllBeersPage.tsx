@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { BeerCard } from "../components/BeerCard";
-import { Beer } from "../components/BeerCard";
+import { BeerCard, Beer } from "../components/BeerCard";
+import axios from "axios";
+
 
 export const AllBeersPage = () => {
   const [beers, setBeers] = useState<Beer[]>([]);
@@ -9,11 +10,10 @@ export const AllBeersPage = () => {
   useEffect(() => {
     const fetchBeers = async () => {
       try {
-        const response = await fetch(
+        const response = await axios.get<Beer[]>(
           "https://f5-beers-065cad3017be.herokuapp.com/beers"
         );
-        const data = (await response.json()) as Beer[];
-        setBeers(data);
+        setBeers(response.data);
       } catch (error) {
         console.log(error);
       }

@@ -10,7 +10,7 @@ export const NavBarGlobal = () => {
           <Link to="/">
             <img
               alt=""
-              src="vite.svg"
+              src="./vite.svg"
               width="100"
               height="30"
               className="d-inline-block align-top"

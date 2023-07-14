@@ -2,11 +2,14 @@ import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export interface Beer {
-  id: number;
+  _id: string;
   image_url: string;
   name: string;
   tagline: string;
   contributed_by: string;
+  first_brewed: string;
+  attenuation_level: number;
+  description: string;
 }
 
 interface BeerCardProps {
@@ -15,8 +18,8 @@ interface BeerCardProps {
 
 export const BeerCard = ({ beer }: BeerCardProps) => {
   return (
-    <Link to={`/beers/${beer.id}`}>
-      <Card style={{ width: "18rem" }} key={beer.id}>
+    <Link to={`/beers/${beer._id}`}>
+      <Card style={{ width: "18rem" }} key={beer._id}>
         <Card.Img variant="top" src={beer.image_url} />
         <Card.Body>
           <Card.Title>{beer.name}</Card.Title>

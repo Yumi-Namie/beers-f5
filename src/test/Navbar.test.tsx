@@ -1,14 +1,14 @@
 import { describe, test, expect } from "vitest";
 import { render, screen, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import {Navbar} from "../components/Navbar";
+import {NavBarGlobal} from "../components/Navbar";
 
 describe("Iteration 3", () => {
   describe("Navbar component", () => {
     test("renders a nav element with a link to the home page", async () => {
       const { container } = render(
         <MemoryRouter>
-          <Navbar />
+          <NavBarGlobal />
         </MemoryRouter>
       );
 

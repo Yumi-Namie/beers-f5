@@ -16,7 +16,7 @@ export const HomePage = () => {
         imgSrc="../assets/random-beer.jpg"
         title="Random Beer"
         txt="Discover a random beer from our selection."
-        linkTo="/random-beer"
+        linkTo="/random"
       />
 
       <HomeCard
