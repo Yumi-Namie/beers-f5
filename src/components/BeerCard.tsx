@@ -9,6 +9,7 @@ export interface Beer {
   first_brewed: string;
   attenuation_level: number;
   description: string;
+  brewers_tips: string;
 }
 interface BeerCardProps {
   beer: Beer;

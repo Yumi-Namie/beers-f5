@@ -22,8 +22,8 @@ export const BeerCardDetail = ({ beer }: BeerDetailsProps) => {
                   </Col>
                 </Row>
                 <Col>
-                <Card.Text className="text-start py-2" style={{fontSize: ".9rem", lineHeight: "1", fontWeight:"600"}}>{beer.description}</Card.Text>
-                <Card.Text className="text-start" style={{ fontSize: ".8rem" }}>{beer.contributed_by}</Card.Text>
+                  <Card.Text className="text-start py-2" style={{fontSize: ".9rem", lineHeight: "1", fontWeight:"600"}}>{beer.description}</Card.Text>
+                  <Card.Text className="text-start" style={{ fontSize: ".8rem" }}>{beer.contributed_by}</Card.Text>
                 </Col>
               </Card.Body>
             </Col>

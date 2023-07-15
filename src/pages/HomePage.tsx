@@ -1,4 +1,3 @@
-import React from "react";
 import allBeersImg from "../assets/all-beers.jpg";
 import randomBeerImg from "../assets/RandomBeer.png";
 import newBeerImg from "../assets/NewBeer.png";
@@ -26,7 +25,7 @@ export const HomePage = () => {
         imgSrc={newBeerImg}
         title="New Beer"
         txt="Indulge in the excitement of trying our latest additions and be the first to savor the flavors of our newest brews."
-        linkTo="/random-beer"
+        linkTo="/new-beer"
       />
     </div>
   );
