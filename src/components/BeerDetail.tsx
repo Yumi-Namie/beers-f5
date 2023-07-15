@@ -7,7 +7,7 @@ interface BeerDetailsProps {
 
 export const BeerCardDetail = ({ beer }: BeerDetailsProps) => {
   return (
-      <Card  key={beer._id} className="d-flex justify-content-center align-items-center">
+      <Card  key={beer._id} className="d-flex justify-content-center align-items-center h-100">
         <Container className="beer-card-container">
           <Row>
             <Col >
