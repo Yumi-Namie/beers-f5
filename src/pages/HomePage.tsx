@@ -1,31 +1,33 @@
+import React from "react";
 import allBeersImg from "../assets/all-beers.jpg";
+import randomBeerImg from "../assets/RandomBeer.png";
+import newBeerImg from "../assets/NewBeer.png";
 
-import {HomeCard} from "../components/HomeCards"
+import { HomeCard } from "../components/HomeCards";
 
 export const HomePage = () => {
   return (
-    <>
+    <div>
       <HomeCard
-        imgSrc= {allBeersImg}
+        imgSrc={allBeersImg}
         title="All Beers"
-        txt="Explore all the beers in our collection."
+        txt="Explore our extensive collection of beers from around the world and discover new flavors and styles."
         linkTo="/beers"
       />
 
       <HomeCard
-        imgSrc="../assets/random-beer.jpg"
+        imgSrc={randomBeerImg}
         title="Random Beer"
-        txt="Discover a random beer from our selection."
+        txt="Embark on a thrilling adventure of taste with a random selection from our diverse range of beers."
         linkTo="/random"
       />
 
       <HomeCard
-        imgSrc="../assets/random-beer.jpg"
-        title="Random Beer"
-        txt="Discover a random beer from our selection."
+        imgSrc={newBeerImg}
+        title="New Beer"
+        txt="Indulge in the excitement of trying our latest additions and be the first to savor the flavors of our newest brews."
         linkTo="/random-beer"
       />
-
-    </>
-  )
-}
+    </div>
+  );
+};
