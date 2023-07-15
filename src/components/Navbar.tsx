@@ -7,7 +7,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 export const NavBarGlobal = () => {
   return (
     <>
-      <Navbar className="bg-body-tertiary" style={{ padding: "0px" }}>
+      <Navbar className="bg-body-tertiary fixed-top" style={{ padding: "0px" }}>
         <Container
           fluid="xxl"
           style={{
@@ -28,6 +28,7 @@ export const NavBarGlobal = () => {
           </Link>
         </Container>
       </Navbar>
+      <div style={{ marginTop: "60px", marginBottom: "10px" }}></div>
     </>
   );
 };
