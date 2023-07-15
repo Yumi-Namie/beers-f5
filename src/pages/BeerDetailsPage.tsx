@@ -1,63 +1,40 @@
-import axios from "axios";
 import { useState, useEffect } from "react";
-import { Beer } from "../components/BeerCard";
 import { useParams } from "react-router-dom";
-import { Container, Row, Col} from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { BeerCardDetail } from "../components/BeerDetail";
-
-
+import { Beer } from "../components/BeerCard";
+import { fetchBeerDetails } from "../components/FetchBeerDetails";
+import NotFoundPage from "./NotFoundPage";
 
 export const BeerDetailsPage = () => {
+  const { beerId } = useParams();
 
-  const { beerId } = useParams<{ beerId: string }>();
+  const [beer, setBeer] = useState<Beer | null>(null);
 
-    const [beers, setBeers] = useState<Beer>();
-  
-    useEffect(() => {
-      const fetchBeersDetails = async () => {
-        try {
-          const response = await axios.get<Beer>(
-            `https://f5-beers-065cad3017be.herokuapp.com/beers/${beerId}`
-          );
-          setBeers(response.data);
-        } catch (error) {
-          console.error("Error fetching beer details:", error);
-        }
-      };
-  
-      fetchBeersDetails();
-    },[beerId]);
-  
+  useEffect(() => {
+    const getBeerDetails = async () => {
+      if (beerId) {
+        const beerDetails = await fetchBeerDetails(beerId);
+        setBeer(beerDetails);
+      }
+    };
 
-    return (
-      <Container>
-        <Row>
-          <Col>
-            {beers && <BeerCardDetail beer={beers} />}
-          </Col>
-        </Row>
-      </Container>
-    );
-    // return{
-      
-    //   <>
-    //   <h2>
-    //   {beer.name}
-    //   </h2></>
+    getBeerDetails();
+  }, [beerId]);
+
+  if (!beer) {
+    return <NotFoundPage />;
+  }
+
+  return (
+    <Container>
+      <Row>
+        <Col>
+          {beer && <BeerCardDetail beer={beer} />}
+        </Col>
+      </Row>
+    </Container>
+  );
+};
 
 
-    // }
-
-
-    // return (
-    //   <Container>
-    //     <Row>
-    //       {beers.map((beer: any) => (
-    //         <Col sm={2} key={beer.id}>
-    //           <BeerCardDetail beer={beer} />
-    //         </Col>
-    //       ))}
-    //     </Row>
-    //   </Container>
-    // );
-}
