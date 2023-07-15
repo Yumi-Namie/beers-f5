@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Beer } from "../components/BeerCard";
 import { Container, Form, Button } from 'react-bootstrap';
 
+console.log("hey")
 
 export const AddBeerPage = () => {
   const [beerForm, setBeerForm] = useState<Beer>({
@@ -71,10 +72,10 @@ export const AddBeerPage = () => {
         <Form.Label>Contributed By</Form.Label>
         <Form.Control type="text" name="contributed_by" value={beerForm.contributed_by} onChange={handleInputChange} />
       </Form.Group>
-      {/* <Form.Group>
+      <Form.Group>
         <Form.Label>Image URL</Form.Label>
         <Form.Control type="text" name="image_url" value={beerForm.image_url} onChange={handleInputChange} />
-      </Form.Group> */}
+      </Form.Group>
       <Button type="submit">Add Beer</Button>
     </Form>
   </Container>
