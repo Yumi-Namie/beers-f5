@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
@@ -9,7 +8,7 @@ export const NavBarGlobal = () => {
     <>
       <Navbar className="bg-body-tertiary fixed-top" style={{ padding: "0px" }}>
         <Container
-          fluid="xxl"
+          fluid
           style={{
             backgroundColor: "#3DC4FC",
             display: "flex",
