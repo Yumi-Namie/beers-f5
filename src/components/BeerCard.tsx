@@ -1,6 +1,5 @@
 import { Card, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
 export interface Beer {
   _id: string;
   image_url: string;
@@ -11,11 +10,9 @@ export interface Beer {
   attenuation_level: number;
   description: string;
 }
-
 interface BeerCardProps {
   beer: Beer;
 }
-
 export const BeerCard = ({ beer }: BeerCardProps) => {
   return (
     <Link className="beer-card" to={`/beers/${beer._id}`}>

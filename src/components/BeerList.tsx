@@ -6,15 +6,17 @@ interface BeerListProps {
 }
 
 export const BeerList = ({ beers }: BeerListProps) => {
-    return (
-      <Container>
-        <Row>
-          {beers.map((beer) => (
-            <Col sm={2} key={beer._id}>
-              <BeerCard beer={beer} />
+   
+      return (
+        <Container>
+          <Row>
+            <Col>
+              {beers.map((beer: Beer) => (
+                <BeerCard beer={beer} key={beer._id} />
+              ))}
             </Col>
-          ))}
-        </Row>
-      </Container>
-    );
-};
+          </Row>
+        </Container>
+      );
+    };
+

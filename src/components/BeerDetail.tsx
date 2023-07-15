@@ -1,10 +1,8 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { Beer } from "../components/BeerCard";
-
 interface BeerDetailsProps {
     beer: Beer;
   }
-
 export const BeerCardDetail = ({ beer }: BeerDetailsProps) => {
   return (
       <Card  key={beer._id} className="d-flex justify-content-center align-items-center">
